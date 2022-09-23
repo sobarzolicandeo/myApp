@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,6 +28,7 @@
       <br />
       <ion-button (click)="ingresar()"> Ingresar </ion-button>
       <br />
+      <br />
       <ion-buttons slot="end">
         <ion-button [routerLink]="['/forgot']">Forgot Password </ion-button>
       </ion-buttons>
@@ -36,7 +37,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/registro']"
         >Registrarse</ion-button
