@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'forgot',
+    loadChildren: () => import('./auth/forgot/forgot.module').then( m => m.ForgotPageModule)
+  },
 ];
 
 @NgModule({
