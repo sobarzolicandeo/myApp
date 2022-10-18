@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfesorPage implements OnInit {
 
+  usuario = JSON.parse(localStorage.getItem("usuario"));
+
   constructor() { }
 
   ngOnInit() {
