@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="login">Back</ion-back-button>
     </ion-buttons>
-    <ion-title>Inicio</ion-title>
+    <ion-title>{{usuario.nombre}} {{usuario.apellido}}</ion-title>
   </ion-toolbar>
 
   <br />
@@ -23,12 +23,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-title>Bienvenido {{usuario.nombre}} {{usuario.apellido}}</ion-title>
-
   <br />
   <ion-button [routerLink]="['/profesor']">Profesor</ion-button>
   <br />
   <br />
   <ion-button [routerLink]="['/alumno']">Alumno</ion-button>
   <br />
+  <br />
+
+  <h1>Calendario</h1>
+
+  <ion-datetime></ion-datetime>
 </ion-content>
