@@ -14,6 +14,8 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class RegistroPage implements OnInit {
 
+  token = 'xxx ';
+
   formularioRegistro: FormGroup;
   
   constructor(public fb: FormBuilder,
@@ -28,6 +30,7 @@ export class RegistroPage implements OnInit {
 
   ngOnInit() {
   }
+  
 
   async guardar(){
     var f = this.formularioRegistro.value;
@@ -52,6 +55,7 @@ export class RegistroPage implements OnInit {
 
     localStorage.setItem('ingresado','true');
     this.navCtrl.navigateRoot('inicio');
+
   }
 
 }
