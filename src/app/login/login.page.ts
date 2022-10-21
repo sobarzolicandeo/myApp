@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder
-} from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
@@ -32,8 +27,11 @@ export class LoginPage implements OnInit {
   async ingresar(){
     var f = this.formularioLogin.value;
 
+    //SE DEBE LLENAR DESDE EL JSON
+    // var usuario = JSON.parse(localStorage.getItem('usuario'));
     var usuario = JSON.parse(localStorage.getItem('usuario'));
 
+    //TIENE QUE EJECUTARSE UN CICLO
     if(usuario.usuario == f.usuario && usuario.contrasena == f.contrasena){
       console.log('Ingresado');
       localStorage.setItem('ingresado','true');
