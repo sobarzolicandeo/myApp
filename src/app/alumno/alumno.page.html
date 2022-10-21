@@ -10,13 +10,8 @@
 <ion-content> 
   <ion-list>
     <ion-item *ngFor = "let user of users">
-      <ion-avatar slot="start">
-        <img src="{{ user.image }}">
-      </ion-avatar>
       <ion-label>
         <h2 class="colorBlue">{{ user.nombre }}</h2>
-        <p>{{ user.contrasena }}</p>
-        <p>{{ user.login }}</p>
       </ion-label>
     </ion-item>
   </ion-list>

@@ -13,7 +13,6 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   formularioLogin: FormGroup;
 
   constructor(public fb: FormBuilder,
@@ -21,11 +20,11 @@ export class LoginPage implements OnInit {
     public navCtrl: NavController) { 
 
     this.formularioLogin = this.fb.group({
-      'nombre': new FormControl("",Validators.required),
-      'password': new FormControl("",Validators.required)
+      'usuario': new FormControl("",Validators.required),
+      'contrasena': new FormControl("",Validators.required)
     })
 
-  }
+    }
 
   ngOnInit() {
   }
@@ -35,18 +34,19 @@ export class LoginPage implements OnInit {
 
     var usuario = JSON.parse(localStorage.getItem('usuario'));
 
-    if(usuario.nombre == f.nombre && usuario.password == f.password){
+    if(usuario.usuario == f.usuario && usuario.contrasena == f.contrasena){
       console.log('Ingresado');
       localStorage.setItem('ingresado','true');
       this.navCtrl.navigateRoot('inicio');
-    }else{
+    }
+    else{
       const alert = await this.alertController.create({
         header: 'Datos incorrectos',
         message: 'Los datos que ingresaste son incorrectos.',
         buttons: ['Aceptar']
-      });
+    });
   
-      await alert.present();
+    await alert.present();
     }
   }
 

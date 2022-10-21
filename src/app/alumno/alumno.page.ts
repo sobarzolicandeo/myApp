@@ -13,8 +13,6 @@ export class AlumnoPage implements OnInit {
   
   users: any = [];
 
-  // usuario = JSON.parse(localStorage.getItem("usuario"));
-
   constructor(
     private http : HttpClient
   ) { }

@@ -3,28 +3,32 @@
             "id": 1,
             "nombre": "Diego Sobarzo",
             "contrasena": "soybombero123",
-            "login": "bomberman",
+            "user": "bomberman",
+            "correo": "diego.sobarzo@duocuc.cl",
             "image": "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
         },
         {
             "id": 2,
-            "nombre": "Jose Lisboa",
+            "nombre": "Jose Ignacio Lisboa",
             "contrasena": "jl2504",
-            "login": "jose123",
+            "user": "jose123",
+            "correo": "jose.lisboa@duocuc.cl",
             "image": "https://vignette.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png"
         },
         {
             "id": 3,
             "nombre": "Ivo Acosta",
             "contrasena": "ia1001",
-            "login": "ivo123",
+            "user": "ivo123",
+            "correo": "ivo.acosta@duocuc.cl",
             "image": "https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png"
         },
         {
             "id": 4,
             "nombre": "Pia Trujillo",
             "contrasena": "pt2710",
-            "login": "pia123",
+            "user": "pia123",
+            "correo": "pia.trujillo@duocuc.cl",
             "image": "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg"
         }
     ]

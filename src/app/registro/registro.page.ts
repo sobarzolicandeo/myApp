@@ -23,14 +23,15 @@ export class RegistroPage implements OnInit {
     public navCtrl: NavController) {
     this.formularioRegistro = this.fb.group({
       'nombre': new FormControl("", Validators.required),
-      'password': new FormControl("", Validators.required),
-      'confirmacionPassword': new FormControl("", Validators.required)
+      'usuario': new FormControl("", Validators.required),
+      'correo': new FormControl("", Validators.required),
+      'contrasena': new FormControl("", Validators.required),
+      'confirmacionContrasena': new FormControl("", Validators.required)
     });
   }
 
   ngOnInit() {
   }
-  
 
   async guardar(){
     var f = this.formularioRegistro.value;
@@ -46,15 +47,27 @@ export class RegistroPage implements OnInit {
       return;
     }
 
+    if(f.contrasena != f.confirmacionContrasena){
+      const alert = await this.alertController.create({
+        header: 'Error en contraseña',
+        message: 'Las contraseñas no coinciden',
+        buttons: ['Aceptar']
+      })
+    
+    await alert.present();
+    return;
+    }
+
     var usuario = {
       nombre: f.nombre,
-      password: f.password
+      usuario: f.usuario,
+      correo: f.correo,
+      contrasena: f.contrasena
     }
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
-
     localStorage.setItem('ingresado','true');
-    this.navCtrl.navigateRoot('inicio');
+    this.navCtrl.navigateRoot('login');
 
   }
 
