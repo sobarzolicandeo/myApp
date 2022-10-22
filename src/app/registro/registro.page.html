@@ -15,19 +15,24 @@
     <ion-card-content>
       <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
         <ion-item>
-          <ion-label position="floating">Usuario</ion-label>
+          <ion-label position="floating">Nombre completo</ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="usuario"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Confirmar Password</ion-label>
-          <ion-input
-            formControlName="confirmacionPassword"
-            type="password"
-          ></ion-input>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input formControlName="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="contrasena" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Repetir contraseña</ion-label>
+          <ion-input formControlName="confirmacionContrasena" type="password"></ion-input>
         </ion-item>
         <br />
         <ion-button (click)="guardar()">Registrarse </ion-button>

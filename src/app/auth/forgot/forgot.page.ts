@@ -1,56 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-
-import { NavController, AlertController } from '@ionic/angular';
-import { Button } from 'protractor';
-
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+} from '@angular/forms';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-forgot',
   templateUrl: './forgot.page.html',
   styleUrls: ['./forgot.page.scss'],
 })
+
 export class ForgotPage implements OnInit {
+  formularioOlvido: FormGroup;
 
-  constructor(public navCtrl: NavController, public alerta: AlertController) {
+  constructor(public fb: FormBuilder,
+    public alertController: AlertController,
+    public navCtrl: NavController){ 
 
-   }
+    this.formularioOlvido = this.fb.group({
+      'usuario': new FormControl("",Validators.required)
+    })
+
+    }
 
   ngOnInit() {
   }
 
-  async alertaBasica(){
-    let miAlerta = this.alerta.create({
-      header: 'Datos incorrectos',
-      message: 'Los datos que ingresaste son incorrectos.',
-      buttons: ['Aceptar']
-    });
+  // async recuperarContrasena(){
+  //   var f = this.formularioOlvido.value;
 
-     (await miAlerta).present();
+  //   var usuario = JSON.parse(localStorage.getItem('usuario'));
+
+  //   if(usuario.usuario == f.usuario){
+  //     const alert = await this.alertController.create({
+  //       header: 'Correo enviado',
+  //       message: 'Correo enviado a {{usuario.correo}}',
+  //       buttons: ['Aceptar']
+  //     });
+  //     await alert.present();
+  //   }
+  //   else{
+  //     const alert = await this.alertController.create({
+  //       header: 'Error',
+  //       message: 'Usuario no se encuentra registrado.',
+  //       buttons: ['Aceptar']
+  //     });
   
-  }
-
-  async alertaBasica2(){
-    let miAlerta = this.alerta.create({
-      header: 'Recuperar',
-      message: 'Ingresa tu usuario para enviar un codigo verificador a tu correo electronico.',
-      inputs: [
-       {
-        name:'Usuario',
-        placeholder: 'Usuario'
-       }, 
-      ],
-      buttons: [
-        {
-          text: 'Enviar',
-          handler: data => {
-            console.log('enviar clicked');
-          }
-        },
-         
-     ]});
-
-     (await miAlerta).present();
-  
-  }
+  //     await alert.present();
+  //   }
+  // }
 
 }

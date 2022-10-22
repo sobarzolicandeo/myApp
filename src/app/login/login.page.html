@@ -30,11 +30,11 @@
       <form [formGroup]="formularioLogin">
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
+          <ion-input formControlName="usuario"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="contrasena" type="password"></ion-input>
         </ion-item>
       </form>
       <br />
@@ -42,7 +42,7 @@
       <br />
       <br />
       <ion-buttons slot="end">
-        <ion-button [routerLink]="['/forgot']">Forgot Password </ion-button>
+        <ion-button [routerLink]="['/forgot']"> Recuperar contraseña </ion-button>
       </ion-buttons>
     </ion-card-content>
   </ion-card>
