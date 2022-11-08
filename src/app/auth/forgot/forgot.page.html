@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login">Back</ion-back-button>
+    </ion-buttons>
+    <br />
+    <ion-title>Olvido contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card-content>
+    <form [formGroup]="formularioOlvido">
+      <ion-item>
+        <ion-label position="floating">Ingrese Usuario</ion-label>
+        <ion-input formControlName="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese Password actual</ion-label>
+        <ion-input formControlName="currentPassword" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Ingrese nueva password</ion-label>
+        <ion-input formControlName="newPassword" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Repita nueva password</ion-label>
+        <ion-input formControlName="confirmPassword" type="password"></ion-input>
+      </ion-item>
+    </form>
+    <br />
+    <ion-button (click)="recuperarContrasena()"> Recuperar contraseña </ion-button>
+
+  </ion-card-content>
+
+</ion-content>

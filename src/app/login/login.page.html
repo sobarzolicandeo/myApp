@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-row>
+      <ion-col>
+        <p style="text-align: center">
+          <img
+            color="blue"
+            src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg"
+            width="250"
+            height="50"
+            margin="50"
+            alt="100"
+          /></p
+      ></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-avatar>
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg"
+        />
+      </ion-avatar>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="usuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="contrasena" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br />
+      <ion-button (click)="ingresar()"> Ingresar </ion-button>
+      <br />
+      <br />
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/forgot']"> Recuperar contraseña </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']"
+        >Registrarse</ion-button
+      > </ion-buttons
+    ><br />
+  </ion-toolbar>
+</ion-footer>

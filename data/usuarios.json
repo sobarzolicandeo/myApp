@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Diego Sobarzo",
+            "contrasena": "soybombero123",
+            "user": "bomberman",
+            "correo": "diego.sobarzo@duocuc.cl"
+        },
+        {
+            "id": 2,
+            "nombre": "Jose Ignacio Lisboa",
+            "contrasena": "jl2504",
+            "user": "jose123",
+            "correo": "jose.lisboa@duocuc.cl"
+        },
+        {
+            "id": 3,
+            "nombre": "Ivo Acosta",
+            "contrasena": "ia1001",
+            "user": "ivo123",
+            "correo": "ivo.acosta@duocuc.cl"
+        },
+        {
+            "id": 4,
+            "nombre": "Pia Trujillo",
+            "contrasena": "pt2710",
+            "user": "pia123",
+            "correo": "pia.trujillo@duocuc.cl"
+        }
+    ]
+}

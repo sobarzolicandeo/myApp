@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login">Back</ion-back-button>
+    </ion-buttons>
+    <ion-title> Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-list>
+    <ion-item *ngFor = "let usuario of listaUsuarios">
+      <ion-label>
+        <h2 class="colorBlue">{{ usuario.nombre }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
