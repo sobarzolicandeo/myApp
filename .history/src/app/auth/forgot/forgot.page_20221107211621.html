@@ -9,6 +9,7 @@
 </ion-header>
 
 <ion-content>
+
   <ion-card-content>
     <form [formGroup]="formularioOlvido">
       <ion-item>
@@ -16,11 +17,8 @@
         <ion-input formControlName="usuario"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Ingrese clave actual</ion-label>
-        <ion-input
-          formControlName="currentPassword"
-          type="password"
-        ></ion-input>
+        <ion-label position="floating">Ingrese Password actual</ion-label>
+        <ion-input formControlName="currentPassword" type="password"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Ingrese nueva password</ion-label>
@@ -28,15 +26,12 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Repita nueva password</ion-label>
-        <ion-input
-          formControlName="confirmPassword"
-          type="password"
-        ></ion-input>
+        <ion-input formControlName="confirmPassword" type="password"></ion-input>
       </ion-item>
     </form>
     <br />
-    <ion-button (click)="recuperarContrasena()">
-      Recuperar contraseña
-    </ion-button>
+    <ion-button (click)="recuperarContrasena()"> Recuperar contraseña </ion-button>
+
   </ion-card-content>
+
 </ion-content>
